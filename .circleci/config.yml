@@ -13,7 +13,7 @@ jobs:
           cluster-name: << parameters.cluster-name >>
       - run:
           command: |
-            kubectl get services
+            kubectl get services && sleep 300
           name: Test cluster
 orbs:
   aws-eks: circleci/aws-eks@0.2.3
